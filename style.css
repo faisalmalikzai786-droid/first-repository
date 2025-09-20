@@ -1,0 +1,26 @@
+.search-input {
+  width: 26rem;
+}
+
+.nav-2 {
+  background-color: rgb(7, 141, 7);
+  height: 10vh;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* removes default spacing */
+}
+
+.dropdown-menu:hover {
+  background-color: rgb(228, 210, 176);
+}
+
+.cart {
+  background-color: rgb(226, 238, 238);
+  height: 23vh;
+}
+
+.first-1d {
+  background-color: rgb(228, 238, 238);
+}
