@@ -21,6 +21,23 @@
   height: 23vh;
 }
 
-.first-1d {
-  background-color: rgb(228, 238, 238);
+/* tree cards section is here! */
+.dives {
+  background-repeat: no-repeat;
+  background-size: 22rem 35vh; /* width height */
+  height: 35vh;
+  width: 22rem;
 }
+
+.first-1d {
+  background-image: url("svges/pexels-mikhail-nilov-7814991.jpg");
+}
+
+.second-2d {
+  background-image: url("svges/pexels-mikhail-nilov-7676960.jpg");
+}
+
+.third-3d {
+  background-image: url("svges/pexels-layyana-sheridean-1477746-2846337.jpg");
+}
+/* tree cards section is ended here! */
