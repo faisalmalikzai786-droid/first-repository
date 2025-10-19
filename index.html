@@ -8,66 +8,99 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- navebar started here! -->
-    <div class="navbar pb-4">
-      <div class="pt-3 d-flex">
-        <img
-          class="ps-4"
-          src="https://freshcart-next-js-template.netlify.app/images/logo/freshcart-logo.svg"
-          alt=""
-        />
+    <!-- first navebar started here! -->
 
-        <div class="border border-dark-subtle rounded ms-3">
-          <button
-            class="btn dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+    <nav class="navbar navbar- expand-lg navbar-light bg-light py-3">
+      <div class="container-fluid">
+        <!-- Brand / Logo -->
+        <a class="navbar-brand ps-4" href="#">
+          <img
+            src="https://freshcart-next-js-template.netlify.app/images/logo/freshcart-logo.svg"
+            alt="Logo"
+            height="40"
+          />
+        </a>
+
+        <!-- Toggler for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <!-- Search + Category -->
+          <form class="d-flex align-items-center ms-lg-3 my-2 my-lg-0 w-50">
+            <div class="input-group">
+              <button
+                class="btn btn-outline-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All categories
+              </button>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search for products"
+              />
+              <span class="input-group-text">
+                <img
+                  src="/svges/search-svgrepo-com.svg"
+                  alt="Search"
+                  style="height: 24px; width: 24px"
+                />
+              </span>
+            </div>
+          </form>
+
+          <!-- Location Button -->
+          <div
+            class="d-flex align-items-center border rounded ms-lg-3 my-2 my-lg-0"
           >
-            All categories
-          </button>
-          <input
-            type="search"
-            placeholder="Search for products"
-            class="search-input border-top-0 border-bottom-0 border-end-0 border-dark-subtle ps-2"
-          />
-          <img
-            class="border-start border-dark-subtle p-1"
-            src="/svges/search-svgrepo-com.svg"
-            style="height: 5vh; width: 2rem"
-          />
-        </div>
+            <img
+              src="/svges/location-svgrepo-com.svg"
+              style="height: 24px; width: 24px"
+              alt="Location"
+            />
+            <button class="btn ms-1">Pick Location</button>
+          </div>
 
-        <div class="text-center border border-dark-subtle rounded ms-3">
-          <img
-            src="/svges/location-svgrepo-com.svg"
-            style="height: 3vh; width: 2rem"
-          />
-          <button class="btn">Pick Location</button>
-        </div>
-        <div class="mx-auto justify-content-end text-end" style="width: 24rem">
-          <img
-            class="me-2"
-            src="svges/heart-svgrepo-com (1).svg"
-            style="height: 4vh; width: 2rem"
-          />
-          <img
-            src="svges/user-social-svgrepo-com.svg"
-            style="height: 4vh; width: 2rem"
-          />
-          <img
-            src="svges/shopbag-svgrepo-com.svg"
-            style="height: 4vh; width: 2rem"
-          />
+          <!-- Icons (Heart, User, Bag) -->
+          <div class="d-flex align-items-center ms-lg-auto mt-3 mt-lg-0">
+            <img
+              class="me-3"
+              src="svges/heart-svgrepo-com (1).svg"
+              style="height: 24px; width: 24px"
+              alt="Wishlist"
+            />
+            <img
+              class="me-3"
+              src="svges/user-social-svgrepo-com.svg"
+              style="height: 24px; width: 24px"
+              alt="User"
+            />
+            <img
+              src="svges/shopbag-svgrepo-com.svg"
+              style="height: 24px; width: 24px"
+              alt="Cart"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
     <!-- first navebar ended here -->
 
     <!-- second navbar stared here! -->
-
-    <div class="nav-2 ps-5 pt-2 justify-content-spacebetween">
+    <div class="nav-2 ps-5 pt-2 z-n1">
       <div class="d-flex" style="width: 30rem">
         <img
           class="pt-2"
@@ -217,11 +250,9 @@
         </div>
       </div>
     </div>
-
     <!-- second navbar ended here! -->
 
     <!-- Fresh cart section started here! -->
-
     <div class="container mt-5">
       <div class="d-flex cart rounded ps-4">
         <img
@@ -235,7 +266,7 @@
           </p>
         </div>
         <button
-          class="btn btn-dark mx-auto text-end justify-content-end me-4 mt-5"
+          class="row-cols-2 btn btn-dark mx-auto text-end justify-content-end me-4 mt-5"
           style="height: 6vh"
         >
           Download Fresh cart app
@@ -245,39 +276,150 @@
     <!-- Fresh cart section ended here! -->
 
     <!-- tree cards section is started here! -->
-
-    <div class="mt-5 container d-flex gap-4">
-      <div class="dives first-1d p-4 rounded text-white">
+    <div
+      class="justify-content-between rounded mt-3 pt-2 pb-2 container gap-1 mx-auto row row-cols-1 row-cols-md-2 row-cols-lg-3"
+    >
+      <div class="dives first-1d p-4 rounded text-white overflow-x-hidden">
         <h3>10% cashback onpersonal care</h3>
         <h5>Max cashback: $12</h5>
         <h6>Code: <span class="text-dark fw-bold">CARE12</span></h6>
         <button class="btn btn-dark">Shop now</button>
       </div>
 
-      <div class="dives second-2d p-4 rounded text-white">
+      <div class="dives second-2d p-4 rounded text-white overflow-x-hidden">
         <h3>Say yes to season’s fresh</h3>
         <h5>Max cashback: $12</h5>
         <h6>Refresh your day the fruity way</h6>
         <button class="btn btn-dark">Shop now</button>
       </div>
 
-      <div
-        class="dives third-3d p-4 rounded text-white"
-        style="width: 22rem; height: 35vh"
-      >
+      <div class="dives third-3d p-4 rounded text-white overflow-x-hidden">
         <h3>When in doubt, eat ice cream</h3>
         <h5>Max cashback: $12</h5>
         <h6>Enjoy a scoop of summer today</h6>
         <button class="btn btn-dark">Shop now</button>
       </div>
     </div>
-
     <!-- tree cards section is ended here! -->
 
-    <!-- 
-        git top 10 comand
-        home work
-        50 top linex commands -->
+    <!-- shop by category is started here ! -->
+    <h3 class="container mt-5 mb-5">Shop by Category</h3>
+    <div class="container mt-3">
+      <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-snack-munchies.jpg"
+            />
+            <p>snack-munchies</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-bakery-biscuits.jpg"
+            />
+            <p>bakery-biscuits</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-instant-food.jpg"
+            />
+            <p>Instant Food</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="p-3 border rounded text-center">
+            <img
+              src="https://freshcart-next-js-template.netlify.app/images/category/category-dairy-bread-eggs.jpg"
+            />
+            <p>Dairy,breadeggs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shop by category is Ended here ! -->
+    <div class="container mt-5">
+      <h3>Fruits & Vegetables</h3>
+      <p>eate fresh, stay healthy</p>
+    </div>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
   </body>
